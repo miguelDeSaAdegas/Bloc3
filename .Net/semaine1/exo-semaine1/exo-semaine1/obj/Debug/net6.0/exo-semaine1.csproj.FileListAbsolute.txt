@@ -1,0 +1,17 @@
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.csproj.AssemblyReference.cache
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.GeneratedMSBuildEditorConfig.editorconfig
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.AssemblyInfoInputs.cache
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.AssemblyInfo.cs
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.csproj.CoreCompileInputs.cache
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\bin\Debug\net6.0\exo-semaine1.exe
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\bin\Debug\net6.0\exo-semaine1.deps.json
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\bin\Debug\net6.0\exo-semaine1.runtimeconfig.json
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\bin\Debug\net6.0\exo-semaine1.dll
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\bin\Debug\net6.0\exo-semaine1.pdb
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.csproj.CopyComplete
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.dll
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\refint\exo-semaine1.dll
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.pdb
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\exo-semaine1.genruntimeconfig.cache
+D:\cours\Bloc3\.Net\semaine1\exo-semaine1\exo-semaine1\obj\Debug\net6.0\ref\exo-semaine1.dll
