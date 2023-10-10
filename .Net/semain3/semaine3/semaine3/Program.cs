@@ -114,7 +114,7 @@ internal class Program
 
         //ex7
 
-        Console.WriteLine("Les territoires gérés par le supérieur de Suyama");
+        /*Console.WriteLine("Les territoires gérés par le supérieur de Suyama");
 
         var reponse = (from e in context.Employees
                       where e.LastName.Equals("Suyama")
@@ -124,6 +124,7 @@ internal class Program
         {
             Console.WriteLine("{0}", territory.TerritoryDescription);
         }
+        */
                      
     }
 }
