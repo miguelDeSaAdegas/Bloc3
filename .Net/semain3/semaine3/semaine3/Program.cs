@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using semaine3.Models;
 
 internal class Program
@@ -9,6 +10,7 @@ internal class Program
     {
         NorthwindContext context = new NorthwindContext();
 
+        //B - Queries
         //ex1
         /*Console.WriteLine("Choisissez une ville");
 
@@ -125,6 +127,92 @@ internal class Program
             Console.WriteLine("{0}", territory.TerritoryDescription);
         }
         */
-                     
+
+        //C - Updates
+        //ex1
+
+        /*foreach (Customer customer in (from c in context.Customers select c))
+        {
+            customer.ContactName = customer.ContactName.ToUpper();
+        }
+
+        context.SaveChanges();
+
+        foreach (Customer customer in (from c in context.Customers select c)) 
+        {
+            Console.WriteLine(customer.ContactName);
+        }
+        */
+
+        //D - Insert
+        //ex1
+
+        /*
+        Console.WriteLine("Veuillez nous donnez le nom de votre nouvelle catégorie");
+
+        String cat = Console.ReadLine();
+
+        Category category = new Category();
+        category.CategoryName = cat;
+
+        context.Categories.Add(category);
+        context.SaveChanges();
+
+        Category rep = (from c in context.Categories
+                  where c.CategoryName == cat
+                  select c).SingleOrDefault();
+
+        Console.WriteLine("category name : {0}",rep.CategoryName);
+        */
+
+        //E - Deletes
+        //ex1
+
+        /*
+        context.Categories.Remove((from c in context.Categories 
+                                   where c.CategoryName == "jhonny" 
+                                   select c).SingleOrDefault());
+        context.SaveChanges();
+
+        IQueryable<Category> categories = from c in context.Categories
+                                          where c.CategoryName == "jhonny"
+                                          select c;
+
+        if (categories.IsNullOrEmpty()) Console.WriteLine("suppression effectuée");
+        else Console.WriteLine("suppression non effectuée");
+         */
+
+        //ex3
+        Console.WriteLine("id employee to delete");
+
+        int empToDelete = Int32.Parse(Console.ReadLine());
+
+        Console.WriteLine("id employee who get his work");
+
+        int empWhoGetOrders = Int32.Parse(Console.ReadLine());
+
+        IQueryable<Order> orders = from o in context.Orders
+                                   where o.EmployeeId == empToDelete
+                                   select o;
+
+        foreach (Order order in orders)
+        {
+            Console.WriteLine("order who is getting changed : {0}",order.OrderId);
+            order.EmployeeId = empWhoGetOrders;
+        }
+
+        context.Employees.Remove((from e in context.Employees 
+                                  where e.EmployeeId == empToDelete 
+                                  select e).FirstOrDefault());
+
+        context.SaveChanges();
+
+        IQueryable<Order> ordersToCheck = from o in context.Orders
+                                          where o.EmployeeId == empWhoGetOrders
+                                          select o;
+
+        foreach (Order order in ordersToCheck)
+            Console.WriteLine("order who got changed : {0}", order.OrderId);
+
     }
 }
