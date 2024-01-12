@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -33,8 +34,17 @@ namespace semaine8
 
         public IList<Place> GetPlacesList { get { return placesList; } }
 
-        public class Place 
+        public class Place : INotifyPropertyChanged
         {
+            public event PropertyChangedEventHandler PropertyChanged;
+            protected virtual void OnPropertyChanged(string propertyName)
+            {
+                if (PropertyChanged != null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                }
+            }
+
             private string _description;
             private string _pathImageFile;
             private int _nbVotes;
@@ -65,7 +75,9 @@ namespace semaine8
             public void Vote()
             {
                 _nbVotes++;
+                OnPropertyChanged(nameof(NbVotes));
             }
+
             public Uri Uri { 
                 get { return _uri; }
                 set { _uri = value; }
